@@ -110,6 +110,7 @@ void skip(char msg[])
 
 int main ()
 {
+    /*
     char msgFromArmy[] = "Don't call me";
     printf("msgFromArmy %lu\n", sizeof(msgFromArmy));
     skip(msgFromArmy);
@@ -118,6 +119,18 @@ int main ()
     printf("好きな食べ物を入力してください");
     scanf("%s\n",food);
     printf("好きな食べ物 入力結果 %s\n", food);
+    */
+    
+    char hogeA[4] = "hoge";
+    char *hoge = hogeA;
+    
+    
+    printf("hoge:%s &hoge:%p \n", hoge, &hoge);
+    //hoge:hoge &hoge:0x7fff5495c7a0
+    printf("*hoge:%c &(*hoge):%p \n", *hoge, &(*hoge));
+    //*hoge:h &(*hoge):0x7fff5495c7a8
+    printf("&hogeA:%p \n", &hogeA);
+    //&hogeA:0x7fff5495c7a8 
     return 0;
 }
 
