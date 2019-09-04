@@ -110,7 +110,7 @@ void skip(char msg[])
 
 int main ()
 {
-    /*
+    
     char msgFromArmy[] = "Don't call me";
     printf("msgFromArmy %lu\n", sizeof(msgFromArmy));
     skip(msgFromArmy);
@@ -119,7 +119,7 @@ int main ()
     printf("好きな食べ物を入力してください");
     scanf("%s\n",food);
     printf("好きな食べ物 入力結果 %s\n", food);
-    */
+   
     
     char hogeA[4] = "hoge";
     char *hoge = hogeA;

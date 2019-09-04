@@ -11,7 +11,7 @@ int catch_signal(int sig, void(*handler)(int))
 	struct sigaction action;
 	action.sa_handler = handler;
 	sigemptyset(&action.sa_mask);
-	action.sa_flags = 0;
+	action.sa_flags   = 0;
 	return sigaction(sig, &action, NULL);
 }
 
@@ -25,7 +25,7 @@ int read_in(int socket, char *buf, int len)
 	{
 		s    += c;
 		slen -= c;
-		c = recv(socket, s, slen);
+		c     = recv(socket, s, slen);
 	}
 
 	//error
@@ -64,10 +64,10 @@ int open_listener_socket()
 void bind_to_port(int socket, int port)
 {
 	struct sockaddr_in name;
-	name.sin_family = PF_INET;
-	name.sin_port   = (in_port_t)htons(port);
+	name.sin_family      = PF_INET;
+	name.sin_port        = (in_port_t)htons(port);
 	name.sin_addr.s_addr = htonl(INADDR_ANY);
-	int reuse = 1;
+	int reuse            = 1;
 	if(setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, (char*)&reuse, sizeof(int)) == -1)
 	{
 		error("ソケットに再利用オプションを使用できません");

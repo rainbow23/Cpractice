@@ -51,6 +51,7 @@ int main(int argc, char * argv[])
 
 	char line[255];
 	while(fgets(line, 255, stdin))
+//	while(fgets(line, 255, fd[0]))
 	{	
 		if(line[0] == '\t')
 		{		

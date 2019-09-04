@@ -1,6 +1,6 @@
 //
 //  struct.c
-//  
+//
 //
 //  Created by Futohashi on 2/7/17.
 //
@@ -37,22 +37,22 @@ int main()
     island *next = NULL;
     island *i    = NULL;
     island *start= NULL;
-    
+
     for(; fgets(name,80,stdin) != NULL; i = next)
     {
         next = create(name);
-        
+
         if(start == NULL)
         {
             start = next;
         }
-        
+
         if(i != NULL)
         {
             i->next = next;
         }
-        
+
     }
-    
+
     display(start);
 }

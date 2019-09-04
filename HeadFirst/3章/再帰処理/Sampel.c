@@ -1,6 +1,6 @@
 //
 //  Sampel.c
-//  
+//
 //
 //  Created by Futohashi on 9/12/16.
 //
@@ -14,8 +14,8 @@ unsigned long calc(int num){
     if(num < 1){
         return 1;
     }
-    
-    
+
+
     int64_t mm = calc(num -1);
     printf("num %i result %lld \n",num, mm);
     return 2 * mm;
